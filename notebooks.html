@@ -21,7 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-/* BACKGROUND */
 .bg {
     position: fixed;
     top: 0;
@@ -34,7 +33,6 @@ body {
     z-index: -1;
 }
 
-/* SIDEBAR */
 .sidebar {
     position: fixed;
     left: 0;
@@ -44,13 +42,11 @@ body {
     background: #000;
     color: #f4c300;
     padding-top: 30px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* TITLE */
 .sidebar h2 {
     margin-bottom: 15px;
     color: #f4c300;
@@ -58,7 +54,6 @@ body {
     width: 100%;
 }
 
-/* LOGO */
 .sidebar img {
     width: 90px;
     height: 90px;
@@ -68,7 +63,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* MENU LINKS */
 .sidebar a {
     width: 100%;
     display: block;
@@ -78,7 +72,6 @@ body {
     transition: 0.2s;
     text-align: center;
     font-size: 15px;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -91,7 +84,6 @@ body {
     color: black;
 }
 
-/* MAIN */
 .main {
     margin-left: 220px;
     padding: 30px;
@@ -104,14 +96,12 @@ body {
     font-size: 26px;
 }
 
-/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
-/* CARD */
 .card {
     background: rgba(255,255,255,0.92);
     border-radius: 14px;
@@ -153,7 +143,6 @@ body {
     font-weight: 500;
 }
 
-/* FOOTER */
 footer {
     position: relative;
     margin-left: 220px;
@@ -171,24 +160,20 @@ footer {
 
 <div class="bg"></div>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
 
     <h2>Menu</h2>
 
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjT7Oeoc7Hll0A86Lipo_WaRCPsr3-SmVq2zcd2S46yUa0vRR0XxLz7Xt_ruO7sVwnLsAwDEmKd5mQmoZI3QfKXX7l7WMC&s&ec=121638510">
 
-    <!-- NEW DASHBOARD ITEM -->
     <a href="#">Dashboard</a>
-
     <a href="#">Home</a>
     <a href="#">Classes</a>
     <a href="#">Settings</a>
-    <a href="index.html" onclick="logout()">Logout</a>
+    <a href="#" onclick="logout(event)">Logout</a>
 
 </div>
 
-<!-- MAIN -->
 <div class="main">
 
     <div class="title">My Classes</div>
@@ -254,13 +239,13 @@ footer {
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
     © 2026 Rodolfo C. Lao III • 9-Ruby
 </footer>
 
 <script>
-function logout() {
+function logout(event) {
+    event.preventDefault();
     let confirmLogout = confirm("Are you sure you want to logout?");
     if (confirmLogout) {
         window.location.href = "index.html";
