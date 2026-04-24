@@ -20,7 +20,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* BACKGROUND */
 .bg {
     position: fixed;
     width: 100%;
@@ -30,7 +29,6 @@ body {
     z-index: -1;
 }
 
-/* HEADER */
 header {
     width: 100%;
     padding: 15px;
@@ -40,7 +38,6 @@ header {
     font-weight: 600;
 }
 
-/* FOOTER */
 footer {
     position: absolute;
     bottom: 0;
@@ -52,7 +49,6 @@ footer {
     font-size: 12px;
 }
 
-/* LOGIN CONTAINER */
 .container {
     position: absolute;
     top: 50%;
@@ -70,7 +66,6 @@ footer {
     text-align: center;
 }
 
-/* CIRCULAR LOGO */
 .logo {
     width: 85px;
     height: 85px;
@@ -84,7 +79,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* INPUTS */
 input {
     width: 100%;
     padding: 11px;
@@ -93,7 +87,6 @@ input {
     border: 1px solid #ccc;
 }
 
-/* TOGGLE */
 .toggle-container {
     display: flex;
     justify-content: space-between;
@@ -143,7 +136,6 @@ input:checked + .slider:before {
     transform: translateX(20px);
 }
 
-/* SESSION TEXT */
 .subtext {
     font-size: 11px;
     color: #555;
@@ -152,7 +144,6 @@ input:checked + .slider:before {
     display: none;
 }
 
-/* BUTTONS */
 button {
     width: 100%;
     padding: 11px;
@@ -180,7 +171,6 @@ button {
     background: #000;
 }
 
-/* FORGOT */
 .forgot {
     margin-top: 12px;
     font-size: 12px;
@@ -191,7 +181,6 @@ button {
     color: #000;
 }
 
-/* ERROR */
 .error {
     color: red;
     font-size: 12px;
@@ -217,7 +206,6 @@ button {
     <input type="text" id="username" placeholder="Username">
     <input type="password" id="password" placeholder="Password">
 
-    <!-- TOGGLE -->
     <div class="toggle-container">
         <span>Stay logged in</span>
         <label class="switch">
@@ -248,7 +236,6 @@ button {
 <script>
 let attempt_counter = 0;
 
-/* TOGGLE SESSION TEXT */
 function toggleMessage() {
     let box = document.getElementById("stayLogin");
     let text = document.getElementById("sessionText");
@@ -256,7 +243,6 @@ function toggleMessage() {
     text.style.display = box.checked ? "block" : "none";
 }
 
-/* LOGIN FUNCTION */
 function function_name(){
 
 let username = document.getElementById("username").value;
@@ -288,7 +274,6 @@ if (attempt_counter >= 3) {
 }
 }
 
-/* CANCEL LOGIN */
 function cancelLogin() {
     let confirmCancel = confirm("Cancel login and clear fields?");
     
